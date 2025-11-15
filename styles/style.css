@@ -158,6 +158,11 @@ header {
   margin: 27px 0 30px;
 }
 
+.lots__item {
+  background-position: center;
+  background-size: cover;
+}
+
 .lots__item-link {
   position: relative;
   display: flex;
@@ -189,20 +194,14 @@ header {
 
 .lots__item__film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: 165% 100%;
 }
 
 .lots__item__book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: 160% 100%;
 }
 
 .lots__item__picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .lots__last-link {
@@ -215,7 +214,6 @@ header {
 .about {
   display: grid;
   grid-template-columns: 2fr 4fr;
-  min-height: 596px;
   margin: 0 24px 180px;
 }
 
@@ -238,6 +236,7 @@ header {
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
+  margin-top: 136px;
 }
 
 .about__text-paragraph {
@@ -264,6 +263,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  margin-bottom: 86px;
 }
 
 .footer__address {
