@@ -7,17 +7,30 @@ ul {
   list-style-type: circle;
 }
 
-.menu__active {
+.link__general {
+  text-underline-offset: 4px;
+}
+
+.link__general:active {
   text-decoration: none;
+}
+
+.link__general:focus {
+  text-decoration: none;
+}
+
+.image__overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.6);
 }
 
 header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  min-height: 293px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 93px 50px 95px;
 }
 
 .menu {
@@ -26,16 +39,11 @@ header {
   font-size: 18px;
 }
 
-.menu__email,
-.menu__tel,
-.lots__last-link {
-  text-underline-offset: 4px;
-}
-
 .address {
   display: flex;
   flex-direction: column;
   color: #000;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.35;
@@ -45,7 +53,6 @@ header {
   display: flex;
   column-gap: 34px;
   width: 391px;
-  height: 22px;
   margin-bottom: 3px;
 }
 
@@ -62,7 +69,6 @@ header {
   flex-wrap: wrap;
   justify-self: end;
   width: 240px;
-  height: 98px;
   margin-bottom: 3px;
 }
 
@@ -77,13 +83,6 @@ header {
   background-image: url("../images/cover.jpg");
   background-position: center;
   background-size: cover;
-}
-
-.cover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0 0 0 / 0.6);
 }
 
 .cover__header {
@@ -130,7 +129,7 @@ header {
 .description__button {
   width: 256px;
   height: 51px;
-  border: 1px solid rgb(255 255 255 / 1);
+  border: 1px solid currentColor;
   color: #fff;
   font-weight: 500;
   font-size: 22px;
@@ -140,7 +139,6 @@ header {
 }
 
 .lots {
-  min-height: 723px;
   margin: 0 24px 120px;
 }
 
@@ -155,32 +153,22 @@ header {
 .lots__items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 25px;
-  margin-top: 27px;
+  margin: 27px 0 30px;
 }
 
-.lots__item {
+.lots__item-link {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 334px;
-  height: 596px;
+  min-height: 596px;
   padding: 48px 40px;
 }
 
-.lots__item-image__overlay {
-  position: relative;
-}
-
-.lots__item-image__overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0 0 0 / 0.6);
-}
-
-.lots__item-link {
+.lots__item-head {
   z-index: 1;
   color: #fff;
   font-weight: 700;
@@ -200,7 +188,6 @@ header {
 }
 
 .lots__item__film {
-  margin-bottom: 30px;
   background-image: url(../images/card-lot-01.jpg);
   background-position: center;
   background-size: 165% 100%;
@@ -276,18 +263,15 @@ header {
 .footer {
   display: flex;
   justify-content: space-between;
-  min-height: 180px;
   padding: 0 50px;
 }
 
 .footer__address {
   width: 265px;
-  height: 98px;
 }
 
 .footer__menu {
   width: 164px;
-  height: 64px;
   margin-right: 20px;
   text-align: center;
 }
